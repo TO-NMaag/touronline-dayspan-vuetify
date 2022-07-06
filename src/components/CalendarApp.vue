@@ -1,7 +1,7 @@
 <template>
 <div class="ds-expand ds-calendar-app">
 
-  <v-navigation-drawer fixed app
+  <v-navigation-drawer absolute app
     v-model="drawer"
     :clipped="$vuetify.breakpoint.lgAndUp">
 

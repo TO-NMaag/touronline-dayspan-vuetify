@@ -1,13 +1,13 @@
 {
-  "name": "dayspan-vuetify",
-  "version": "0.4.0",
-  "description": "A collection of components for Schedules and Calendars in DaySpan using Vuetify",
-  "author": "Philip Diffenderfer <pdiffenderfer@gmail.com>",
+  "name": "touronline-dayspan-vuetify",
+  "version": "0.4.1",
+  "description": "Fork of a collection of components for Schedules and Calendars in DaySpan using Vuetify (Credits to Philipp Diffenderfer)",
+  "author": "Nico Maag <nico.maag@dirs21.team>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ClickerMonkey/dayspan-vuetify.git"
+    "url": "https://github.com/TO-NMaag/touronline-dayspan-vuetify.git"
   },
-  "main": "dist/lib/dayspan-vuetify.min.js",
+  "main": "dist/lib/touronline-dayspan-vuetify.min.js",
   "private": false,
   "license": "MIT",
   "scripts": {
