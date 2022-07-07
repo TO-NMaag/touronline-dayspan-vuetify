@@ -4,8 +4,8 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../../dayspan-vuetify-docs/example/index.html'),
-    assetsRoot: path.resolve(__dirname, '../../dayspan-vuetify-docs/example'),
+    index: path.resolve(__dirname, '../../touronline-dayspan-vuetify-docs/example/index.html'),
+    assetsRoot: path.resolve(__dirname, '../../touronline-dayspan-vuetify-docs/example'),
     assetsSubDirectory: '',
     assetsPublicPath: '',
     productionSourceMap: true,

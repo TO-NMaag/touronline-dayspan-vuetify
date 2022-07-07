@@ -1,6 +1,6 @@
 {
   "name": "touronline-dayspan-vuetify",
-  "version": "0.4.1",
+  "version": "0.4.3",
   "description": "Fork of a collection of components for Schedules and Calendars in DaySpan using Vuetify (Credits to Philipp Diffenderfer)",
   "author": "Nico Maag <nico.maag@dirs21.team>",
   "repository": {
