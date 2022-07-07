@@ -13,9 +13,9 @@ import de from './locales/de'
 import ca from './locales/ca'
 import nl from './locales/nl'
 
-import 'moment/lang/fr'
-import 'moment/lang/ca'
-import 'moment/lang/nl'
+import 'moment/locale/fr'
+import 'moment/locale/ca'
+import 'moment/locale/nl'
 import * as moment from 'moment'
 moment.lang('en')
 
