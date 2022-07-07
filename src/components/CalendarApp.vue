@@ -17,10 +17,12 @@
 
   </v-navigation-drawer>
 
-  <v-toolbar app flat fixed
+  <v-toolbar app flat absolute
     class="ds-app-calendar-toolbar"
     color="white"
-    :clipped-left="$vuetify.breakpoint.lgAndUp">
+    :clipped-left="$vuetify.breakpoint.lgAndUp"
+    v-if="toolbarActive"
+    >
 
     <v-toolbar-title class="ml-0" :style="toolbarStyle">
       <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
@@ -209,7 +211,7 @@
 
       </slot>
 
-      <slot name="calendarAppAdd" v-bind="{allowsAddToday, addToday}">
+      <slot name="calendarAppAdd" v-if="addButtonActive" v-bind="{allowsAddToday, addToday}">
 
         <v-fab-transition v-if="!readOnly">
           <v-btn
@@ -314,11 +316,28 @@ export default {
       default() {
         return this.$dsDefaults().promptDialog;
       }
+    },
+    drawer: {
+      type: Boolean,
+      default() {
+        return true;
+      }
+    },
+    toolbarActive: {
+      type: Boolean,
+      default() {
+        return true;
+      }
+    },
+    addButtonActive: {
+      type: Boolean,
+      default() {
+        return true;
+      }
     }
   },
 
   data: vm => ({
-    drawer: null,
     optionsVisible: false,
     options: [],
     promptVisible: false,
@@ -421,6 +440,8 @@ export default {
       state.eventSorter = state.listTimes
         ? Sorts.List([Sorts.FullDay, Sorts.Start])
         : Sorts.Start;
+        
+        console.log(state)
 
       this.calendar.set( state );
 

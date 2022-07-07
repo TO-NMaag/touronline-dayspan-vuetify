@@ -4,7 +4,11 @@
     <ds-calendar-app ref="app"
       :calendar="calendar"
       :read-only="readOnly"
-      @change="saveState">
+      @change="saveState"
+      :drawer="drawer"
+      :toolbarActive="toolbarActive"
+      :addButtonActive="addButtonActive"
+      >
 
       <template slot="title">
         DaySpan
@@ -87,6 +91,9 @@ export default {
   data: vm => ({
     storeKey: 'dayspanState',
     calendar: Calendar.months(),
+    drawer: false,
+    toolbarActive: false,
+    addButtonActive: false,
     readOnly: false,
     currentLocale: vm.$dayspan.currentLocale,
     locales: [
@@ -280,6 +287,8 @@ export default {
     window.app = this.$refs.app;
 
     this.loadState();
+    
+    console.log(this.calendar)
   },
 
   methods:
